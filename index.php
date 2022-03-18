@@ -5,7 +5,11 @@
     <title>CSV</title>
 </head>
 <body>
-    <label for="input-csv">CSV: </label>
-    <input id="input-csv" type="file">
+    <form action="./upload.php" method="post" enctype="multipart/form-data">
+        <label for="input-csv">CSV: </label>
+        <input id="input-csv" name="file" type="file">
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
