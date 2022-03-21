@@ -7,6 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <title>CSV</title>
+
+    <script>
+        const baseUrl = "<?php echo $baseUrl; ?>"
+    </script>
 </head>
 <body>
     <form action="./upload.php" method="post" enctype="multipart/form-data">

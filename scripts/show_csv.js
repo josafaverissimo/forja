@@ -1,5 +1,5 @@
 function getCsvContent() {
-    return fetch("http://localhost/github/forja/get_all_csv.php")
+    return fetch(`${baseUrl}/get_all_csv.php`)
         .then(response => response.json())
 }
 
