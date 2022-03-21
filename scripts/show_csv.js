@@ -7,6 +7,8 @@ async function showCsvFiles() {
     const csvContent = await getCsvContent()
     const csvFilesContainer = document.getElementById("csv-files")
 
+    csvFilesContainer.querySelectorAll('.csv-file-table').forEach(csvFileTable => csvFileTable.remove())
+
     Object.keys(csvContent).forEach(key => {
         const csvFilename = key
         const csvHeader = csvContent[key][0].split(',')
@@ -36,6 +38,7 @@ async function showCsvFiles() {
         })
 
         csvFilesContainer.appendChild(csvTableBoilerplate)
+        csvTableBoilerplate.setAttribute('class', 'csv-file-table')
         csvTableBoilerplate.removeAttribute('hidden')
     })
 }
