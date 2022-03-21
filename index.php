@@ -51,9 +51,11 @@
                 fetch(`${baseUrl}/upload.php`, {
                     method: "POST",
                     body: formdata
+                }).then(() => {
+                    showCsvFiles()
                 })
 
-                showCsvFiles()
+                
             })
         })
     </script>
