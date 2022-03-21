@@ -23,4 +23,4 @@
     endforeach;
     
     header('Content-Type: application/json');
-    echo json_encode($csvFilesContentByFilename);
+    echo json_encode(array_reverse($csvFilesContentByFilename));

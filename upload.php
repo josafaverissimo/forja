@@ -1,6 +1,6 @@
 <?php
     $uploadDir = "./uploads";
-    $filename = $_FILES['file']['name'];
+    $filename = (new DateTime('now'))->getTimestamp() . '_' . $_FILES['file']['name'];
     $filePath = "{$uploadDir}/{$filename}";
 
     if(!is_dir($uploadDir)):
